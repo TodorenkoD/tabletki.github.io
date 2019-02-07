@@ -1,44 +1,27 @@
       .nav {
           &__list {
-              display: -webkit-box;
-              display: -ms-flexbox;
               display: flex;
-
               list-style: none;
-
               margin: 0;
           }
 
           &__item {
               position: relative;
-
               padding: 0;
-
               text-transform: uppercase;
-
           }
 
 
           &__link {
 
               .icon {
-                  display: -webkit-box;
-                  display: -ms-flexbox;
                   display: flex;
-                  margin-right: 15px;
-
-                  -webkit-box-pack: center;
-
-                  -ms-flex-pack: center;
-
                   justify-content: center;
-                  -webkit-box-align: center;
-                  -ms-flex-align: center;
                   align-items: center;
+                  margin-right: 15px;
 
                   &:before {
                       display: inline-block;
-
                       content: '';
                   }
 
@@ -47,7 +30,6 @@
                       &:before {
                           width: 31px;
                           height: 31px;
-
                           background: url(../images/icons/icon--login.png) 0 0 no-repeat;
                       }
                   }
@@ -57,7 +39,6 @@
                       &:before {
                           width: 31px;
                           height: 31px;
-
                           background: url(../images/icons/icon--basket.png) 0 0 no-repeat;
                       }
                   }
@@ -67,7 +48,6 @@
                       &:before {
                           width: 31px;
                           height: 31px;
-
                           background: url(../images/icons/icon--bookmark.png) 0 0 no-repeat;
                       }
                   }

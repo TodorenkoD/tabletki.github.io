@@ -1,16 +1,17 @@
 .news {
     background: #f9f9f9;
-        padding: 1rem;
+    padding: 1rem;
 
     .shadow {
-                box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
-            }
+        box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
+    }
 
     .card {
         &-title {
-             @include text($Rubik, $black, 16, 700);
+            @include text($Rubik, $black, 16, 700);
             line-height: 24px;
-            padding: 1rem;;
+            padding: 1rem;
+            ;
             margin-bottom: 0;
         }
     }
@@ -19,7 +20,7 @@
         font-family: Rubik;
         font-size: 14px;
         line-height: 16px;
-        padding:0rem 1rem 1rem 1rem;
+        padding: 0rem 1rem 1rem 1rem;
 
 
         &__title {}
@@ -29,8 +30,6 @@
             font-size: 14px;
             line-height: 18px;
             display: block;
-
-
         }
 
         &__datetime {
@@ -39,7 +38,7 @@
 
         &__content {
             color: $grey;
-            padding:.5rem 0;
+            padding: .5rem 0;
         }
     }
 }

@@ -23,11 +23,12 @@
         }
 
         a {
-             @include text($Rubik, $green, 14, 400);
+            @include text($Rubik, $green, 14, 400);
             line-height: 14px;
             text-align: center;
-            &:hover{
-            	text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }
