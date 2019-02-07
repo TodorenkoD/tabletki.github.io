@@ -1,9 +1,24 @@
 .navigation__block {
-    color: $green;
-    font-family: Rubik;
-    font-size: 16px;
-    font-weight: 500;
+    @include text($Rubik, $black, 16, 500);
     line-height: 24px;
+    justify-content: space-around !important;
+    display: flex;
+
+    div {
+        padding: 1rem;
+        text-align: center;
+
+        &:first-child {
+            border-right: 1px solid #ccc;
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+        }
+
+        &:last-child {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
 
     a {
         color: $green;
@@ -17,15 +32,14 @@
     .icon {
         position: relative;
         top: 4px;
+        padding-right: 10px;
 
         &--nav_arrow {
             &:before {
                 display: inline-block;
-
                 content: '';
                 width: 21px;
                 height: 21px;
-
                 background: url(../images/icons/icon--nav_arrow.png) 0 0 no-repeat;
             }
         }
@@ -33,11 +47,9 @@
         &--gps {
             &:before {
                 display: inline-block;
-
                 content: '';
                 width: 20px;
                 height: 20px;
-
                 background: url(../images/icons/icon--gps.png) 0 0 no-repeat;
             }
         }

@@ -1,9 +1,11 @@
     .filter__btn {
-        color: $white;
-        font-family: Rubik;
-        font-size: 16px !important;
-        line-height: 24px !important;
-        padding: .5rem .5rem !important;
+        @include text($Rubik, $white, 16, 400);
+        line-height: 24px;
+        padding: .5rem .5rem;
+
+        i {
+            padding-right: 5px;
+        }
 
         &--orange {
             background: $orange;
@@ -16,12 +18,10 @@
 
     .show {
         &-all {
+            @include text($Rubik, $green, 14, 400);
             background: #EDF6F1;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
-            color: $green;
-            font-family: Rubik;
-            font-size: 14px;
             line-height: 18px;
         }
 
@@ -29,12 +29,13 @@
             background: #EDF6F1;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
+            padding: 1.5rem 1rem;
 
             &__link {
-                color: $green;
-                font-family: Rubik;
-                font-size: 14px;
+                @include text($Rubik, $green, 14, 400);
                 line-height: 18px;
+                display: flex;
+                justify-content: center;
 
                 &:hover {
                     color: $green;
@@ -42,4 +43,19 @@
                 }
             }
         }
+    }
+
+    .btn-block+.btn-block {
+        margin-top: .5rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .btn-block {
+        display: block;
+        width: 100%;
     }

@@ -1,23 +1,23 @@
 <section class="pharmacy__product">
-    <div class="container result__item py-3">
+    <div class="container result__item">
         <div class="card shadow">
             <div class="card-header">
                 <a href="#" class="back">Назад</a>
             </div>
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="card-body__content">
                     <h5 class="card-title mb-0">Аптека гормональних
 препаратів</h5>
-                    <a href="#" data-toggle="popover" title="title" data-content="content content content content" data-placement="bottom"><i class="fas fa-ellipsis-h popover-icon mt-1"></i></a>
+                    <a href="#"><i class="fas fa-ellipsis-h popover-icon"></i></a>
                 </div>
                 <div class="adres">
                     Киев, Софиевская Борщаговка, ул. Леси Украинки 19 (ЖК София) · 250 м
                 </div>
-                <div class="time my-2">
+                <div class="time">
                     Режим работы: 8:00–22:00 <span class="time--open"><i class="fas fa-circle"></i></span>
                 </div>
             </div>
-            <div class="card-footer p-0">
+            <div class="card-footer">
                 <div class="search">
                     <div class="search__content">
                         <form action="/search">
@@ -34,15 +34,17 @@
             </div>
         </div>
     </div>
-    <div class="container result__item pt-1">
-        <div class="card shadow p-3">
-            <div class="all__results mb-3">
+    <div class="container result__item">
+        <div class="card shadow">
+            <div class="card-body">
+            <div class="all__results">
                 6 предложений в этой аптеке:
                 <b>ибупром</b>
             </div>
-            <button type="button" class="btn btn-lg btn-block filter__btn filter__btn--orange"><i class="fas fa-filter"></i> Настроить список</button>
-            <button type="button" class="btn btn-lg btn-block filter__btn filter__btn--orange"><i class="fas fa-bookmark"></i> Добавить к поиску по списку</button>
+            <button type="button" class="btn btn-block filter__btn filter__btn--orange"><i class="fas fa-filter"></i> Настроить список</button>
+            <button type="button" class="btn btn-block filter__btn filter__btn--orange"><i class="fas fa-bookmark"></i> Добавить к поиску по списку</button>
         </div>
+          </div>
     </div>
     <div class="product-order">
         <div class="product-order__title">
@@ -50,13 +52,11 @@
             <span>Борщаговский химфармзавод, Украина</span>
         </div>
         <div class="product-order__content shadow">
-            <div class="d-flex justify-content-between">
+            <div class="quantity__title">
                 <h5>Добавить к резерву</h5>
-                <button type="button" class="close" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+               <a href="#" class="close"><i class="fas fa-times"></i></a>
             </div>
-            <div class="d-flex justify-content-between flex-wrap align-content-center my-3 quantity">
+            <div class="quantity__content">
                 <div>
                     <p>Количество</p>
                     <div>
@@ -64,7 +64,7 @@
                             <span class="input-group-btn">
 					<button class="btn btn-controls btn-controls__minus btn-controls__minus--orange" data-dir="dwn"><i class="fa fa-minus"></i></button>
 				</span>
-                            <input type="text" class="form-control text-center" value="1">
+                            <input type="text" class="form-control" value="1">
                             <span class="input-group-btn">
 					<button class="btn btn-controls btn-controls__plus btn-controls__plus--orange" data-dir="up"><i class="fa fa-plus"></i></button>
 				</span>
@@ -72,23 +72,23 @@
                     </div>
                 </div>
                 <div>
-                    <p class="text-right">Цена</p>
+                    <p>Цена</p>
                     <p>
                         <b>49,50 ₴</b>
                     </p>
                 </div>
                 <div>
-                    <p class="text-right">Итого</p>
+                    <p>Итого</p>
                     <p>
                         <b>148,50 ₴</b>
                     </p>
                 </div>
             </div>
-            <button type="button" class="btn btn-lg btn-block filter__btn filter__btn--green mt-2">Добавить к резерву</button>
+            <button type="button" class="btn btn-block filter__btn filter__btn--green">Добавить к резерву</button>
         </div>
     </div>
     <div class="products-price__list">
-        <div class="products-price__item px-3 my-3">
+        <div class="products-price__item">
             <ul class="list-group shadow">
                 <li class="list-group-item">
                     <div class="title">
@@ -114,7 +114,7 @@
                 </li>
             </ul>
         </div>
-        <div class="products-price__item px-3 my-3">
+        <div class="products-price__item">
             <ul class="list-group shadow">
                 <li class="list-group-item">
                     <div class="title">
@@ -140,7 +140,7 @@
                 </li>
             </ul>
         </div>
-        <div class="products-price__item px-3 my-3">
+        <div class="products-price__item">
             <ul class="list-group shadow">
                 <li class="list-group-item">
                     <div class="title">

@@ -1,6 +1,6 @@
 .pharmacy__product {
     .shadow {
-        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .15) !important;
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .15);
     }
 
 
@@ -8,105 +8,132 @@
         &__list {}
 
         &__item {
+            margin: 1rem;
 
-.list-group{
-    border-radius:5px;
-}
+
+
+            .list-group {
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+
             .list-group-item {
+                position: relative;
+                display: block;
+                padding: .75rem 1.25rem;
+                margin-bottom: -1px;
+                background-color: #fff;
+                border: 1px solid rgba(0, 0, 0, .125);
+
+                button{margin-top: .5rem;}
 
                 &:first-child {
                     border-color: #dedede;
+                    border-top-left-radius: .25rem;
+                    border-top-right-radius: .25rem;
                 }
 
-                    &:last-child {
-                       border-color: #dedede;
-                    }
+                &:last-child {
+                    border-color: #dedede;
+                    margin-bottom: 0;
+                    border-bottom-right-radius: .25rem;
+                    border-bottom-left-radius: .25rem;
                 }
+            }
 
-                .title {
-                    color: $black;
-                    font-family: Rubik;
-                    font-size: 14px;
-                    font-weight: 500;
+            .title {
+                @include text($Rubik, $black, 14, 500);
+                line-height: 20px;
+
+                span {
+                    color: $grey;
+                    font-weight: 400;
                     line-height: 20px;
-
-                    span {
-                        color: $grey !important;
-                        font-weight: 400 !important;
-                        line-height: 20px !important;
-                    }
-                }
-
-                .price {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 14px;
-                    line-height: 20px;
-
-                    span {
-                        font-family: Rubik;
-                        font-size: 14px;
-                        font-weight: normal;
-                        line-height: 16px;
-                    }
-
-                    &--base {
-                        color: $light-grey;
-                    }
-
-                    &--reserve {
-                        color: $green;
-                        font-weight: 700 !important;
-
-                    }
-
-                    &--econom {
-                        color: $red;
-                    }
-                }
-            }
-        }
-
-        .card {
-            &-header {
-                background: $white;
-            }
-
-            &-title {
-                font-family: Rubik;
-                font-size: 16px;
-                color: #008739;
-                font-weight: 400;
-                line-height: 24px;
-            }
-
-            .back {
-                font-family: Rubik;
-                font-size: 16px;
-                line-height: 24px;
-                color: $green;
-
-
-                &:before {
-                    display: inline-block;
-                    content: "";
-                    width: 10px;
-                    height: 10px;
-                    margin-right: 10px;
-                    background: url(../images/icons/icon--arrow-left.png) 0 0 no-repeat;
-
                 }
             }
 
-            .search {
-                &__content {
-                    border-radius: 0 0 5px 5px;
+            .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+                line-height: 20px;
+
+                span {
+                    @include text($Rubik, $black, 14, 400);
+                    line-height: 16px;
                 }
 
-                &:after {
-                    border-bottom: none !important;
+                &--base {
+                    color: $light-grey;
+                }
+
+                &--reserve {
+                    color: $green;
+                    font-weight: 700;
+
+                }
+
+                &--econom {
+                    color: $red;
                 }
             }
         }
     }
+
+    .card {
+        &-header {
+            background: $white;
+        }
+
+        &-body {
+            &__content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .all__results {
+            padding-bottom: 1rem;
+            margin: 0;
+            @include text($Rubik, $black, 15, 400);
+        }
+
+        &-title {
+            font-weight: 400;
+        }
+
+        &-footer {
+            padding: 0;
+        }
+
+        .back {
+            @include text($Rubik, $green, 16, 400);
+            line-height: 24px;
+
+            &:before {
+                display: inline-block;
+                content: "";
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+                background: url(../images/icons/icon--arrow-left.png) 0 0 no-repeat;
+
+            }
+        }
+
+        .search {
+            &__content {
+                border-radius: 0 0 5px 5px;
+            }
+
+            &:after {
+                border-bottom: none !important;
+            }
+        }
+    }
+}

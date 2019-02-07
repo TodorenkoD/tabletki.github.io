@@ -16,13 +16,41 @@
         }
     }
 
-    .quantity {
+    .quantity__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .close {
+            opacity: 0.5;
+            font-size: 1rem;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    .quantity__content {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+
         div {
+            line-height: 1.5;
+
             p {
                 margin-bottom: .5rem;
+                text-align: left;
+                font-size: 1rem;
 
                 &:first-child {
                     color: $light-grey;
+                    text-align: right;
                 }
 
                 b {
@@ -38,82 +66,77 @@
 
         .number-spinner {
             input {
+                @include text($Rubik, $black, 14, 700);
                 height: 32px;
                 width: 50px;
-                font-weight: 700;
                 line-height: 14px;
                 border-right: none;
                 border-left: none;
-                font-family: Rubik;
-                font-size: 14px;
-                font-weight: bold;
+                text-align: center;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+
 
                 &:focus {
-                    outline: none !important;
-                    box-shadow: none !important;
+                    outline: none;
+                    box-shadow: none;
                 }
             }
-        
 
-        .btn {
-            &:focus {
-                outline: none !important;
-                box-shadow: none !important;
-            }
 
-            &-controls {
-                color: #FFFFFF;
-                font-family: Rubik;
-                font-size: 14px;
-                font-weight: bold;
-                line-height: 24px;
-                width: 32px;
-                height: 32px;
-                padding: 0;
-                border-radius: 0;
+            .btn {
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
 
-                &__minus {
-                    border-radius: 3px 0 0 3px;
+                &-controls {
+                    @include text($Rubik, $white, 14, 700);
+                    line-height: 24px;
+                    width: 32px;
+                    height: 32px;
+                    padding: 0;
+                    border-radius: 0;
 
-                    &--orange {
-                        background: $orange;
+                    &__minus {
+                        border-radius: 3px 0 0 3px;
+
+                        &--orange {
+                            background: $orange;
+                        }
+                    }
+
+                    &__plus {
+                        border-radius: 0 3px 3px 0;
+
+                        &--orange {
+                            background: $orange;
+
+                        }
                     }
                 }
-
-                &__plus {
-                    border-radius: 0 3px 3px 0;
-
-                    &--orange {
-                        background: $orange;
-
-                    }
-                }
             }
+
+
         }
 
-
     }
 
-}
-
-.shadow {
-    box-shadow:
-        0 0.1rem .5rem 0.1rem rgba(0, 0, 0, .15) !important;
-}
-
-
-
-&__content {
-    background: $white;
-    padding: 1rem 1.75rem !important;
-
-    h5 {
-        color: $black;
-        font-family: Rubik;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 24px;
-        margin: 0
+    .shadow {
+        box-shadow:
+            0 0.1rem .5rem 0.1rem rgba(0, 0, 0, .15);
     }
-}
+
+
+
+    &__content {
+        background: $white;
+        padding: 1rem 1.75rem;
+
+        h5 {
+            @include text($Rubik, $black, 18, 700);
+            line-height: 24px;
+            margin: 0
+        }
+    }
 }

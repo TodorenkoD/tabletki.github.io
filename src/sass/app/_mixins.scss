@@ -1,0 +1,13 @@
+@function rem($px) {
+    $rems: $px / 16;
+    @return #{$rems}rem;
+}
+
+@mixin text ($font, $color, $f-size, $weight: 500) {
+    font: {
+        family: $font;
+        size: rem($f-size);
+        weight: $weight;
+    }
+    color: $color;
+}

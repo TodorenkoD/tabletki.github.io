@@ -1,102 +1,21 @@
 .result {
-    background: #f9f9f9;
+    background: $bg-color;
 
     &__block {
         .shadow {
-            box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15) !important;
+            box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
         }
     }
 
 
     &__item {
-        .all-results {
-            font-family: Rubik;
-            font-size: 18px;
-            font-weight: normal;
+        margin: 1rem 0;
+
+        .all__results {
+            @include text($Rubik, $black, 18, 500);
             line-height: 24px;
-
-            color: $black;
-        }
-
-        .card {
-            &-header{
-                &--white{
-                    background:$white;
-                }
-            }
-            .popover-icon {
-                font-size: 18px;
-
-                color: $green;
-            }
-
-            &-body {
-                font-family: Rubik;
-                font-size: 14px;
-                line-height: 16px;
-                padding: 1rem;
-                color: #888;
-
-
-                .time {
-                    i {
-                        font-size: 7px;
-
-                        position: relative;
-                        top: -2px;
-                    }
-
-
-
-                    &--open {
-                        color: $green;
-                    }
-
-                    &--closed {
-                        color: $red;
-                    }
-
-                    &--wait {
-                        color: $orange;
-                    }
-                }
-            }
-
-            &-title {
-                font-family: Rubik;
-                font-size: 16px;
-                font-weight: bold;
-                line-height: 24px;
-
-                color: $green;
-
-                &--black {
-                    color: $black;
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-            }
-
-            &-footer {
-                font-family: Rubik;
-                font-size: 14px;
-                line-height: 24px;
-
-                color: $black;
-                background: $white;
-
-                a {
-                    color: $black;
-
-                    &.disabled {
-                        cursor: default;
-                        text-decoration: none;
-                        pointer-events: none;
-
-                        color: $grey;
-                    }
-                }
-            }
+            margin-left: 1.5rem;
+            margin-bottom: .5rem;
         }
     }
 }

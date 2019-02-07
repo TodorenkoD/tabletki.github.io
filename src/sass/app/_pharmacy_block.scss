@@ -1,7 +1,7 @@
 .pharmacy__block {
     .shadow {
-                box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15) !important;
-            }
+        box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
+    }
 
     .card {
         &-header {
@@ -13,7 +13,18 @@
             font-size: 18px;
         }
 
-        .all_pharmacy {
+        &-body {
+            .btn {
+                margin-top: .5rem;
+            }
+        }
+        &-footer{
+            padding:0;
+        }
+
+        .all__pharmacy {
+            padding-top: .5rem;
+
             a {
                 color: $green;
             }
