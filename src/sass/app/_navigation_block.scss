@@ -1,10 +1,10 @@
-.navigation__block {
+.navigation-block {
     @include text($Rubik, $black, 16, 500);
     line-height: 24px;
     justify-content: space-around;
     display: flex;
 
-    div {
+    &__item {
         padding: 1rem;
         text-align: center;
 
@@ -20,7 +20,7 @@
         }
     }
 
-    a {
+    &__link{
         color: $green;
 
         &:hover {
@@ -34,7 +34,7 @@
         top: 4px;
         padding-right: 10px;
 
-        &--nav_arrow {
+        &__nav-arrow {
             &:before {
                 display: inline-block;
                 content: '';
@@ -44,7 +44,7 @@
             }
         }
 
-        &--gps {
+        &__gps {
             &:before {
                 display: inline-block;
                 content: '';

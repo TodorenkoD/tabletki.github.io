@@ -29,13 +29,14 @@
             background: #EDF6F1;
             border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
-            padding: 1.5rem 1rem;
+            
 
             &__link {
                 @include text($Rubik, $green, 14, 400);
                 line-height: 18px;
                 display: flex;
                 justify-content: center;
+                padding: 1.5rem 1rem;
 
                 &:hover {
                     color: $green;

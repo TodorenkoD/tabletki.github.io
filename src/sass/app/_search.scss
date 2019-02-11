@@ -17,29 +17,6 @@
         padding: 10px 15px;
         background: #F9F9F9;
 
-        .btn {
-            background: $white;
-            border: 1px solid #ccc;
-            border-left: none;
-            color: #8C8C8C;
-            display: block;
-            line-height: 15px;
-            padding: .375rem .75rem;
-
-            &:before {
-                display: inline-block;
-                content: '';
-                width: 16px;
-                height: 16px;
-                background: url(../images/icons/icon--search.png) 0 0 no-repeat;
-            }
-
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-        }
-
         input {
             &:focus {
                 outline: none;
@@ -51,13 +28,7 @@
     }
 }
 
-.input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
-}
+
 
 .form-control {
     display: block;
@@ -80,14 +51,42 @@
     border-bottom-right-radius: 0;
 }
 
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
 .input-group-append {
     margin-left: -1px;
     display: flex;
 
-    .btn {
+    &__button {
         position: relative;
         z-index: 2;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        background: $white;
+        border: 1px solid #ccc;
+        border-left: none;
+        color: #8C8C8C;
+        display: block;
+        line-height: 15px;
+        padding: .375rem .75rem;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url(../images/icons/icon--search.png) 0 0 no-repeat;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
     }
 }
