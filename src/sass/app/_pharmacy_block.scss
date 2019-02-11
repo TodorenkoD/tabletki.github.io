@@ -1,16 +1,12 @@
-.pharmacy__block {
-    .shadow {
-        box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
-    }
-
+.pharmacy-block {
     .card {
         &-header {
             background: $white;
-        }
 
-        &-title {
-            color: $black;
-            font-size: 18px;
+            &__title {
+                color: $black;
+                font-size: 18px;
+            }
         }
 
         &-body {
@@ -23,7 +19,7 @@
             padding: 0;
         }
 
-        .all__pharmacy {
+        .all-pharmacy {
             padding-top: .5rem;
 
             a {
@@ -31,5 +27,4 @@
             }
         }
     }
-
 }

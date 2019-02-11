@@ -8,16 +8,17 @@
             background-clip: border-box;
             border: 1px solid rgba(0, 0, 0, .125);
             border-radius: .25rem;
+            @extend %shadow;
 
             &-header {
-                padding: .75rem 1.25rem;
+                padding: .75rem 1rem;
                 border-bottom: 1px solid rgba(0, 0, 0, .125);
 
                 &:first-child {
                     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
                 }
 
-                &--white {
+                &_white {
                     background: $white;
                 }
 
@@ -26,7 +27,19 @@
                     justify-content: space-between;
                     align-items: center;
                 }
+
+                &__title {
+                    @include text($Rubik, $green, 16, 700);
+                    line-height: 24px;
+
+                    &_black {
+                        color: $black;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
             }
+
 
             .popover-icon {
                 font-size: 18px;
@@ -36,16 +49,21 @@
             &-body {
                 @include text($Rubik, $grey, 14, 400);
                 line-height: 16px;
-                padding: .75rem 1.25rem;
+                padding: .75rem 1rem;
 
-                .name {
+                &__name {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 10px;
                 }
 
-                .time {
+                &__title {
+                    @include text($Rubik, $green, 16, 700);
+                    line-height: 24px;
+                }
+
+                &__time {
                     margin-top: .25rem;
 
                     i {
@@ -56,20 +74,20 @@
 
 
 
-                    &--open {
+                    &_open {
                         color: $green;
                     }
 
-                    &--closed {
+                    &_closed {
                         color: $red;
                     }
 
-                    &--wait {
+                    &_wait {
                         color: $orange;
                     }
                 }
 
-                .action {
+                &__action {
                     margin-top: .5rem;
                 }
 
@@ -79,23 +97,12 @@
 
             }
 
-            &-title {
-                @include text($Rubik, $green, 16, 700);
-                line-height: 24px;
-
-                &--black {
-                    color: $black;
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-            }
-
             &-footer {
                 @include text($Rubik, $black, 14);
                 line-height: 24px;
                 border-top: 1px solid rgba(0, 0, 0, .125);
                 background: $white;
-                padding: .75rem 1.25rem;
+                padding: .75rem 1rem;
 
                 &:last-child {
                     border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);

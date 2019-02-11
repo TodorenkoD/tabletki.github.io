@@ -92,38 +92,24 @@
                     height: 32px;
                     padding: 0;
                     border-radius: 0;
+                    background: $orange;
 
                     &__minus {
                         border-radius: 3px 0 0 3px;
-
-                        &--orange {
-                            background: $orange;
-                        }
                     }
 
                     &__plus {
                         border-radius: 0 3px 3px 0;
-
-                        &--orange {
-                            background: $orange;
-
-                        }
                     }
                 }
             }
         }
     }
 
-    .shadow {
-        box-shadow:
-            0 0.1rem .5rem 0.1rem rgba(0, 0, 0, .15);
-    }
-
-
-
     &__content {
         background: $white;
         padding: 1rem 1.75rem;
+        @extend %shadow;
 
         h5 {
             @include text($Rubik, $black, 18, 700);

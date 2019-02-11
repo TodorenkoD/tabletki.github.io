@@ -1,17 +1,13 @@
-.result {
+.result-block {
     background: $bg-color;
 
-    &__block {
-        .shadow {
-            box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
-        }
-    }
-
+    &__list {}
 
     &__item {
         margin: 1rem 0;
+        padding: 0 1rem;
 
-        .all__results {
+        .all-results {
             @include text($Rubik, $black, 18, 500);
             line-height: 24px;
             margin-left: 1.5rem;

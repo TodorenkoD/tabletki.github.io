@@ -1,14 +1,24 @@
-.pharmacy__product {
-    .shadow {
-        box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, .15);
-    }
+.pharmacy-product {
 
 
     .products-price {
-        &__list {}
+        &__list {
+            margin: 1rem 0;
+        }
 
         &__item {
             margin: 1rem;
+            background: #f9f9f9;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: $white;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .5rem;
+            @extend %shadow;
 
             .list-group {
                 border-radius: 5px;
@@ -26,10 +36,6 @@
                 background-color: #fff;
                 border: 1px solid rgba(0, 0, 0, .125);
 
-                button {
-                    margin-top: .5rem;
-                }
-
                 &:first-child {
                     border-color: #dedede;
                     border-top-left-radius: .25rem;
@@ -42,44 +48,47 @@
                     border-bottom-right-radius: .25rem;
                     border-bottom-left-radius: .25rem;
                 }
-            }
 
-            .title {
-                @include text($Rubik, $black, 14, 500);
-                line-height: 20px;
-
-                span {
-                    color: $grey;
-                    font-weight: 400;
+                &__title {
+                    @include text($Rubik, $black, 14, 500);
                     line-height: 20px;
+
+                    span {
+                        color: $grey;
+                        font-weight: 400;
+                        line-height: 20px;
+                    }
+                }
+
+                &__price {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                    span {
+                        // @include text($Rubik, $black, 14, 400);
+                        line-height: 16px;
+                    }
+
+                    &_base {
+                        color: $light-grey;
+                    }
+
+                    &_reserve {
+                        color: $green;
+                        font-weight: 700;
+                    }
+
+                    &_econom {
+                        color: $red;
+                    }
                 }
             }
 
-            .price {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                font-size: 14px;
-                line-height: 20px;
-
-                span {
-                    @include text($Rubik, $black, 14, 400);
-                    line-height: 16px;
-                }
-
-                &--base {
-                    color: $light-grey;
-                }
-
-                &--reserve {
-                    color: $green;
-                    font-weight: 700;
-
-                }
-
-                &--econom {
-                    color: $red;
-                }
+            button {
+                margin-top: .5rem;
             }
         }
     }
@@ -95,9 +104,13 @@
                 justify-content: space-between;
                 align-items: center;
             }
+
+            &__title {
+                font-weight: 400;
+            }
         }
 
-        .all__results {
+        .all-results {
             padding-bottom: 1rem;
             margin: 0;
             @include text($Rubik, $black, 15, 400);

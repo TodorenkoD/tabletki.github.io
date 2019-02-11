@@ -1,20 +1,24 @@
 .news {
     background: #f9f9f9;
-    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $white;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    @extend %shadow;
 
-    .shadow {
-        box-shadow: 0 0 .5rem 0.1rem rgba(0, 0, 0, .15);
+    &__title {
+        @include text($Rubik, $black, 16, 700);
+        line-height: 24px;
+        padding: 1rem;
+        margin-bottom: 0;
     }
 
-    .card {
-        &-title {
-            @include text($Rubik, $black, 16, 700);
-            line-height: 24px;
-            padding: 1rem;
-            ;
-            margin-bottom: 0;
-        }
-    }
 
     .article {
         font-family: Rubik;
