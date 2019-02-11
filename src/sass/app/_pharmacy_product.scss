@@ -33,17 +33,17 @@
                 display: block;
                 padding: .75rem 1.25rem;
                 margin-bottom: -1px;
-                background-color: #fff;
+                background-color: $white;
                 border: 1px solid rgba(0, 0, 0, .125);
 
                 &:first-child {
-                    border-color: #dedede;
+                    border-color: $grey-regular;
                     border-top-left-radius: .25rem;
                     border-top-right-radius: .25rem;
                 }
 
                 &:last-child {
-                    border-color: #dedede;
+                    border-color: $grey-regular;
                     margin-bottom: 0;
                     border-bottom-right-radius: .25rem;
                     border-bottom-left-radius: .25rem;
