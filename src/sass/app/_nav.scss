@@ -14,7 +14,7 @@
 
           &__link {
 
-              .icon {
+              &-icon {
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -23,33 +23,6 @@
                   &:before {
                       display: inline-block;
                       content: '';
-                  }
-
-                  &__login {
-
-                      &:before {
-                          width: 31px;
-                          height: 31px;
-                          background: url(../images/icons/icon--login.png) 0 0 no-repeat;
-                      }
-                  }
-
-                  &__basket {
-
-                      &:before {
-                          width: 31px;
-                          height: 31px;
-                          background: url(../images/icons/icon--basket.png) 0 0 no-repeat;
-                      }
-                  }
-
-                  &__bookmark {
-
-                      &:before {
-                          width: 31px;
-                          height: 31px;
-                          background: url(../images/icons/icon--bookmark.png) 0 0 no-repeat;
-                      }
                   }
               }
           }

@@ -4,13 +4,18 @@ $purple:                #7266ba;
 $pink:                  #f532e5;
 $yellow:                #fad732;
 $green:                 #008739;
+$green-lighten: 		#EDF6F1;
 $white:					#fff;
 $black:                 #000;
 $orange:                #F5A623;
 $light-grey:			#444;
 $grey:					#888888;
 $grey-regular:			#dedede;
+$grey-lighten: 			lighten($grey, 10%);
+$grey-darken: 			darken($grey, 10%);
 $red:					#D0021B;
+$border-color:			#ccc;
+$border-color-lighten: 	lighten($border-color, 5%);
 
 //background
 $bg-color:				#F9F9F9;

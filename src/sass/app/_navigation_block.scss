@@ -9,7 +9,7 @@
         text-align: center;
 
         &:first-child {
-            border-right: 1px solid #ccc;
+            border-right: 1px solid $border-color;
             flex: 0 0 66.666667%;
             max-width: 66.666667%;
         }
@@ -29,29 +29,9 @@
         }
     }
 
-    .icon {
+    &__icon {
         position: relative;
         top: 4px;
         padding-right: 10px;
-
-        &__nav-arrow {
-            &:before {
-                display: inline-block;
-                content: '';
-                width: 21px;
-                height: 21px;
-                background: url(../images/icons/icon--nav_arrow.png) 0 0 no-repeat;
-            }
-        }
-
-        &__gps {
-            &:before {
-                display: inline-block;
-                content: '';
-                width: 20px;
-                height: 20px;
-                background: url(../images/icons/icon--gps.png) 0 0 no-repeat;
-            }
-        }
     }
 }

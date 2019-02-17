@@ -7,6 +7,14 @@
         margin: 1rem 0;
         padding: 0 1rem;
 
+        .card {
+            &__body {
+                button {
+                    margin-top: .5rem;
+                }
+            }
+        }
+
         .all-results {
             @include text($Rubik, $black, 18, 500);
             line-height: 24px;

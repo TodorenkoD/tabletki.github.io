@@ -4,31 +4,38 @@
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
-            background-color: #fff;
+            background-color: $white;
             background-clip: border-box;
-            border: 1px solid rgba(0, 0, 0, .125);
+            border: 1px solid $border-color-lighten;
             border-radius: .25rem;
             @extend %shadow;
 
-            &-header {
+            &__header {
                 padding: .75rem 1rem;
-                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                border-bottom: 1px solid $border-color-lighten;
 
                 &:first-child {
                     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+                }
+
+                &-link {
+                    &-icon {
+                        font-size: 18px;
+                        color: $green;
+                    }
                 }
 
                 &_white {
                     background: $white;
                 }
 
-                &__content {
+                &-content {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                 }
 
-                &__title {
+                &-title {
                     @include text($Rubik, $green, 16, 700);
                     line-height: 24px;
 
@@ -41,38 +48,41 @@
             }
 
 
-            .popover-icon {
-                font-size: 18px;
-                color: $green;
-            }
 
-            &-body {
+
+            &__body {
                 @include text($Rubik, $grey, 14, 400);
                 line-height: 16px;
                 padding: .75rem 1rem;
 
-                &__name {
+                &-link {
+                    &-icon {
+                        font-size: 18px;
+                        color: $green;
+                    }
+                }
+
+
+                &-name {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 10px;
                 }
 
-                &__title {
+                &-title {
                     @include text($Rubik, $green, 16, 700);
                     line-height: 24px;
                 }
 
-                &__time {
+                &-time {
                     margin-top: .25rem;
 
-                    i {
+                    &-icon {
                         font-size: 7px;
                         position: relative;
                         top: -2px;
                     }
-
-
 
                     &_open {
                         color: $green;
@@ -87,20 +97,16 @@
                     }
                 }
 
-                &__action {
+                &-action {
                     margin-top: .5rem;
                 }
-
-                .setting {
-                    margin-top: .5rem;
-                }
-
             }
 
-            &-footer {
+
+            &__footer {
                 @include text($Rubik, $black, 14);
                 line-height: 24px;
-                border-top: 1px solid rgba(0, 0, 0, .125);
+                border-top: 1px solid $border-color-lighten;
                 background: $white;
                 padding: .75rem 1rem;
 
@@ -109,7 +115,7 @@
                 }
 
 
-                a {
+                &-link {
                     color: $black;
 
                     &.disabled {
