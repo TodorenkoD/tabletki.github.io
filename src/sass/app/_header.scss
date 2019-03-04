@@ -20,16 +20,16 @@
         }
     }
 
-    &__logo {
-        a {
-            text-transform: uppercase;
-            @include text($Rubik, $green, 16, 500);
-            line-height: 32px;
+    &__logo {}
 
-            &:hover {
-                text-decoration: none;
-                color: $green;
-            }
+    &__link {
+        text-transform: uppercase;
+        @include text($Rubik, $green, 16, 500);
+        line-height: 32px;
+
+        &:hover {
+            text-decoration: none;
+            color: $green;
         }
     }
 }

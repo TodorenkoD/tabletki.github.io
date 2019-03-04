@@ -40,15 +40,10 @@
                     line-height: 24px;
 
                     &_black {
-                        color: $black;
-                        font-size: 18px;
-                        font-weight: bold;
+                        @include text($Rubik, $black, 18, 700);
                     }
                 }
             }
-
-
-
 
             &__body {
                 @include text($Rubik, $grey, 14, 400);
@@ -61,7 +56,6 @@
                         color: $green;
                     }
                 }
-
 
                 &-name {
                     display: flex;
@@ -124,6 +118,78 @@
                         pointer-events: none;
                         color: $grey;
                     }
+                }
+            }
+
+            &__dropdown {
+                float: right;
+                position: relative;
+                display: inline-block;
+                z-index: 1;
+
+                &-button {
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 999;
+                    display: block;
+                    font-size: 28px;
+                    @extend .ic-dots-horizontal;
+                }
+
+                &-link {
+                    @include text($Rubik, $light-grey, 14, 400);
+                    padding: 1rem 0;
+                    text-decoration: none;
+                    display: block;
+                    border-bottom: 1px solid $border-color;
+
+                    &_last {
+                        color: $grey-lighten;
+                        border-bottom: none;
+                        padding-top: 1rem;
+                        display: block;
+                    }
+                }
+
+                &-content {
+                    display: none;
+                    position: absolute;
+                    background-color: $white;
+                    min-width: 310px;
+                    border-radius: .25rem;
+                    right: -27px;
+                    top: 25px;
+                    z-index: 1;
+                    @extend %shadow;
+                    padding: 1rem;
+
+                    &:after,
+                    &:before {
+                        bottom: 100%;
+                        border: solid transparent;
+                        content: "";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+
+                    &:after {
+                        border-bottom-color: $white;
+                        border-width: 10px;
+                        right: 30px;
+                    }
+
+                    &:before {
+                        border-bottom-color: $border-color;
+                        border-width: 12px;
+                        right: 28px;
+                        opacity: 0.4;
+                    }
+                }
+
+                .show {
+                    display: block;
                 }
             }
         }

@@ -24,22 +24,22 @@ var paths = {
     img: 'src/images/**/*.+(png|jpg|gif|svg)'
   },
   dist: {
-    html: 'dist',
-    css: 'dist/css',
-    js: 'dist/js',
-    fonts: 'dist/fonts',
-    img: 'dist/images',
+    html: 'public',
+    css: 'public/css',
+    js: 'public/js',
+    fonts: 'public/fonts',
+    img: 'public/images',
   },
   watch: {
     html: 'src/**/*.html'
   },
-  clean: './dist'
+  clean: './public'
 };
 
 // конфигурация сервера
 var serverConfig = {
   server: {
-    baseDir: './dist'
+    baseDir: './public'
   },
   host: 'localhost',
   port: 9000,

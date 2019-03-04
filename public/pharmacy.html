@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.png?" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+ -->
+    <title>Tabletki.ua</title>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__content">
+                <!-- Trigger/Open The Modal -->
+                <div class="header__content-left">
+                    <button id="menuBtn" class="open-menu"><i class="fas fa-bars"></i></button>
+                    <div class="header__logo">
+                        <a class="header__link" href="/">Tabletki.ua</a>
+                    </div>
+                </div>
+                <div class="header__content-right">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    <i class="nav__link-icon icon__login"></i>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    <i class="nav__link-icon icon__bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    <i class="nav__link-icon icon__basket"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="banner">
+            	<img src="images/banner.jpg" alt="banner">
+            </section>
+            <section class="pharmacy-block">
+                <div class="result-block__item">
+                    <div class="breadcrumbs">
+                            <ul class="breadcrumbs__item-list">
+                                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Аптека</a></li>
+                                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__item-link">Препарат</a></li>
+                            </ul>
+                        </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <div class="card__header-content">
+                                <h5 class="card__header-title">Аптека гормональних препаратів</h5>
+                                <a href="#" class="card__header-link"><i class="card__header-link-icon fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <div class="search__content">
+                                <form action="/search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Поиск препаратов" aria-label="Поиск препаратов">
+                                        <div class="input-group-append">
+                                            <button class="input-group-append__button" type="button">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <div class="card__body-adres">
+                                Киев, Софиевская Борщаговка, ул. Леси Украинки 19 (ЖК София) · 250 м
+                            </div>
+                            <div class="card__body-time">
+                                Режим работы: 8:00–22:00 <span class="card__body-time_open"><i class="card__body-time-icon fas fa-circle"></i></span>
+                            </div>
+                            <div class="card__body-action">
+                                Участвует в программах: Abbott, Orange Card, Доступні Ліки
+                            </div>
+                            <button type="button" class="btn btn-block filter__btn filter__btn_orange">Позвонить</button>
+                            <div class="all-pharmacy"><a href="#" class="all-pharmacy__link">Все аптеки этой сети: 14</a></div>
+                        </div>
+                        <div class="card__footer">
+                            <div id="googleMap" style="width:100%;height:140px;"></div>
+                            <script>
+                            function myMap() {
+                                var mapProp = {
+                                    center: new google.maps.LatLng(50.27, 30.30),
+                                    zoom: 5,
+                                };
+                                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                            }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+            <section class="banner">
+            	<img src="images/banner.jpg" alt="banner">
+            </section>
+            <section class="news">
+                <h5 class="news__title">Новости и акции</h5>
+                <article class="article">
+                    <h3 class="article__title">
+               <a href="#" class="article__link">Программа лояльности</a>
+              </h3>
+                    <time class="article__datetime">12 августа 2018</time>
+                    <div class="article__content">
+                        Программа лояльности для Гостей нашей сети аптек «Аптека гормональних
+                        препаратів» предоставляет Вам возможность получать и использовать баллы при покупке товаров у нас в сети, а также...
+                    </div>
+                </article>
+                <article class="article">
+                    <h3 class="article__title">
+               <a href="#" class="article__link">Средства по уходу за телом Family Doctor — скидка 25%</a>
+              </h3>
+                    <time class="article__datetime">8 июля 2018</time>
+                    <div class="article__content">
+                        Только на протяжении июля в наших аптеках скидка 25% на средства по уходу за телом Family Doctor.
+                    </div>
+                </article>
+                <article class="article">
+                    <h3 class="article__title">
+               <a href="#" class="article__link">Препараты от ревматизма
+            </a>
+              </h3>
+                    <time class="article__datetime">12 августа 2018</time>
+                    <div class="article__content">
+                        Ревматизм спины — заболевание соединительных тканей воспалительного типа. Развитие недуга происходит после попадания стрептококка в организм. Патогенные элементы похожи к молекулам...
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <!--             //= html/footer.html
+ -->
+        </footer>
+    </div>
+    <!-- end wrapper -->
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+
+</html>

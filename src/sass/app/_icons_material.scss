@@ -1,0 +1,164 @@
+@font-face {
+	font-family: "material";
+	src: url('/fonts/material.eot?en0msswirw5cnvrsq3l4n');
+	src: url('/fonts/material.eot?en0msswirw5cnvrsq3l4n#iefix') format('eot'),
+		url('/fonts/material.woff2?en0msswirw5cnvrsq3l4n') format('woff2'),
+		url('/fonts/material.woff?en0msswirw5cnvrsq3l4n') format('woff'),
+		url('/fonts/material.ttf?en0msswirw5cnvrsq3l4n') format('truetype'),
+		url('/fonts/material.svg?en0msswirw5cnvrsq3l4n#material') format('svg');
+}
+
+@mixin ic-styles {
+	font-family: "material";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%ic {
+	@include ic-styles;
+}
+
+@function ic-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-back {
+		$char: "\E001";
+	}
+	@if $filename == bookmark-border {
+		$char: "\E002";
+	}
+	@if $filename == bookmark {
+		$char: "\E003";
+	}
+	@if $filename == call {
+		$char: "\E004";
+	}
+	@if $filename == check {
+		$char: "\E005";
+	}
+	@if $filename == chevron-right {
+		$char: "\E006";
+	}
+	@if $filename == circle-medium {
+		$char: "\E007";
+	}
+	@if $filename == close {
+		$char: "\E008";
+	}
+	@if $filename == directions {
+		$char: "\E009";
+	}
+	@if $filename == dots-horizontal {
+		$char: "\E00A";
+	}
+	@if $filename == exit-to-app {
+		$char: "\E00B";
+	}
+	@if $filename == filter-outline {
+		$char: "\E00C";
+	}
+	@if $filename == history {
+		$char: "\E00D";
+	}
+	@if $filename == info-outline {
+		$char: "\E00E";
+	}
+	@if $filename == menu {
+		$char: "\E00F";
+	}
+	@if $filename == perm-identity {
+		$char: "\E010";
+	}
+	@if $filename == search {
+		$char: "\E011";
+	}
+	@if $filename == shopping-cart {
+		$char: "\E012";
+	}
+	@if $filename == star-border {
+		$char: "\E013";
+	}
+	@if $filename == star {
+		$char: "\E014";
+	}
+
+	@return $char;
+}
+
+@mixin ic($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %ic;
+		} @else {
+			@include ic-styles;
+		}
+		content: ic-char($filename);
+	}
+}
+
+.ic-arrow-back {
+	@include ic(arrow-back);
+}
+.ic-bookmark-border {
+	@include ic(bookmark-border);
+}
+.ic-bookmark {
+	@include ic(bookmark);
+}
+.ic-call {
+	@include ic(call);
+}
+.ic-check {
+	@include ic(check);
+}
+.ic-chevron-right {
+	@include ic(chevron-right);
+}
+.ic-circle-medium {
+	@include ic(circle-medium);
+}
+.ic-close {
+	@include ic(close);
+}
+.ic-directions {
+	@include ic(directions);
+}
+.ic-dots-horizontal {
+	@include ic(dots-horizontal);
+}
+.ic-exit-to-app {
+	@include ic(exit-to-app);
+}
+.ic-filter-outline {
+	@include ic(filter-outline);
+}
+.ic-history {
+	@include ic(history);
+}
+.ic-info-outline {
+	@include ic(info-outline);
+}
+.ic-menu {
+	@include ic(menu);
+}
+.ic-perm-identity {
+	@include ic(perm-identity);
+}
+.ic-search {
+	@include ic(search);
+}
+.ic-shopping-cart {
+	@include ic(shopping-cart);
+}
+.ic-star-border {
+	@include ic(star-border);
+}
+.ic-star {
+	@include ic(star);
+}

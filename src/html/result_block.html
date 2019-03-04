@@ -12,7 +12,18 @@
                 <div class="card__body">
                     <div class="card__body-name">
                         <h5 class="card__body-title">Аптека Watsons</h5>
-                        <a href="#" class="card__body-link"><i class="card__body-link-icon fas fa-ellipsis-h"></i></a>
+                        <div class="card__dropdown">
+                            <a href="#" onclick="dropdown();" class="card__body-link card__dropdown-button">
+<!--                                 <i class="card__body-link-icon fas fa-ellipsis-h"></i>
+ -->                            </a>
+                            <div id="dropdown" class="card__dropdown-content">
+                                <a class="card__dropdown-link" href="#">Показать на карте</a>
+                                <a class="card__dropdown-link" href="#">Добавить в Мои Аптеки</a>
+                                <a class="card__dropdown-link" href="#">Позвонить: +38 044 258 73 14</a>
+                                <a class="card__dropdown-link" href="#">Пожаловаться</a>
+                                <a class="card__dropdown-link_last" href="#">Последнее обновление: сегодня 15:20</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card__body-adres">
                         Киев, Бульвар Перова, 36 · 250 м

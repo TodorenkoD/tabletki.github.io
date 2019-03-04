@@ -6,38 +6,55 @@
         background: $green;
         padding: 1rem;
         margin: 1rem 1rem 0 1rem;
-
-        span {
-            font-weight: 400;
-            line-height: 20px;
-        }
     }
 
-    .quantity__title {
+    &__description {
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__content {
+        background: $white;
+        padding: 1rem 1.75rem;
+        @extend %shadow;
+    }
+}
+
+.quantity {
+
+    &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
 
-    .quantity__link-close {
-        color: $black;
-        opacity: 0.5;
-        font-size: 1rem;
-
-        &:hover {
-            opacity: 1;
+        &_bold {
+            @include text($Rubik, $black, 18, 700);
+            line-height: 24px;
+            margin: 0
         }
     }
 
-    .quantity__content {
+    &__link {
+        &-close {
+            color: $black;
+            opacity: 0.5;
+            font-size: 1rem;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content {
         display: flex;
         justify-content: space-between;
         margin: 1rem 0;
 
-        div {
+        &-group {
             line-height: 1.5;
 
-            p {
+            &-item {
                 margin-bottom: .5rem;
                 text-align: left;
                 font-size: 1rem;
@@ -47,7 +64,7 @@
                     text-align: right;
                 }
 
-                b {
+                &_bold {
                     height: 32px;
                     line-height: 32px;
                     @include text($Rubik, $black, 14, 700);
@@ -55,63 +72,51 @@
                 }
             }
         }
+    }
+}
 
-        .number-spinner {
-            input {
-                @include text($Rubik, $black, 14, 700);
-                height: 32px;
-                width: 50px;
-                line-height: 14px;
-                border-right: none;
-                border-left: none;
-                text-align: center;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
+.number-spinner {
+    &__input {
+        @include text($Rubik, $black, 14, 700);
+        height: 32px;
+        width: 50px;
+        line-height: 14px;
+        border: 1px solid $border-color;
+        border-right: none;
+        border-left: none;
+        text-align: center;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
 
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-
-
-            .btn {
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-
-                &-controls {
-                    @include text($Rubik, $white, 14, 700);
-                    line-height: 24px;
-                    width: 32px;
-                    height: 32px;
-                    padding: 0;
-                    border-radius: 0;
-                    background: $orange;
-
-                    &__minus {
-                        border-radius: 3px 0 0 3px;
-                    }
-
-                    &__plus {
-                        border-radius: 0 3px 3px 0;
-                    }
-                }
-            }
+        &:focus {
+            outline: none;
+            box-shadow: none;
         }
     }
 
-    &__content {
-        background: $white;
-        padding: 1rem 1.75rem;
-        @extend %shadow;
 
-        h5 {
-            @include text($Rubik, $black, 18, 700);
+    &__btn {
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &-controls {
+            @include text($Rubik, $white, 14, 700);
             line-height: 24px;
-            margin: 0
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border-radius: 0;
+            background: $orange;
+
+            &_minus {
+                border-radius: 3px 0 0 3px;
+            }
+
+            &_plus {
+                border-radius: 0 3px 3px 0;
+            }
         }
     }
 }
