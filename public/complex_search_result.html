@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.png?" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+ -->
+    <title>Tabletki.ua</title>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__content">
+                <!-- Trigger/Open The Modal -->
+                <div class="header__content-left">
+                    <button id="menuBtn" class="open-menu"><i class="fas fa-bars"></i></button>
+                    <div class="header__logo">
+                        <a class="header__link" href="/">Tabletki.ua</a>
+                    </div>
+                </div>
+                <div class="header__content-right">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    <i class="nav__link-icon icon__login"></i>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link nav__link_active">
+                                    <i class="nav__link-icon icon__bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    <i class="nav__link-icon icon__basket"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="search">
+                <div class="search__content">
+                    <form action="/search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Поиск препаратов" aria-label="Поиск препаратов">
+                            <div class="input-group-append">
+                                <button class="input-group-append__button" type="button">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="banner">
+            	<img src="images/banner.jpg" alt="banner">
+            </section>
+            <section class="complex-search-result">
+                <div class="complex-search-result__item">
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="all-results">
+                                <b>Список из 6 препаратов</b><br>
+                                найден в 109 аптеках:
+                            </div>
+                            <button type="button" class="btn btn-block filter__btn filter__btn_green"><i class="filter__btn-icon fas fa-filter"></i> Настроить результаты поиска</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-more"><a href="#" class="show-more__link show-more__link_arrow">Показать 19 результатов с доставкой из интернет-аптек</a></div>
+                <div class="complex-search-result__item">
+                    <div class="card">
+                        <div class="card__body_green">
+                            <div class="card__body-name">
+                                <h5 class="card__body-title">Аптека Watsons</h5>
+                                <a href="#" class="card__body-link"><i class="card__body-link-icon fas fa-ellipsis-h"></i></a>
+                            </div>
+                            <div class="cardcard__body-adres">
+                                Киев, Бульвар Перова, 36 · 250 м
+                            </div>
+                            <div class="card__body-time">
+                                Открыта до 21:00 <span class="card__body-time_open"><i class="card__body-time-icon fas fa-circle"></i></span>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                    <p class="list-group-item__price_grey">при резерве</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                    <p class="list-group-item__price_grey">при резерве</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                    <p class="list-group-item__price_grey">при резерве</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card__footer">
+                            <button type="button" class="btn btn-lg btn-block filter__btn filter__btn_green">Выбрать и купить в этой аптеке</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="complex-search-result__item">
+                    <div class="card">
+                        <div class="card__body_green">
+                            <div class="card__body-name">
+                                <h5 class="card__body-title">Нейро-Аптека ТОВ</h5>
+                                <a href="#" class="card__body-link"><i class="card__body-link-icon fas fa-ellipsis-h"></i></a>
+                            </div>
+                            <div class="cardcard__body-adres">
+                                Киев, бул.Вацлава Гавела 40А · 1,2 км
+                            </div>
+                            <div class="card__body-time">
+                                Закроется через 2 часа, в 19:30 <span class="card__body-time_wait"><i class="card__body-time-icon fas fa-circle"></i></span>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card__footer">
+                            <a href="#" class="card__footer-link disabled">В этой аптеке резервирование недоступно</a>
+                        </div>
+                    </div>
+                </div>
+                   <div class="complex-search-result__item">
+                    <div class="card">
+                        <div class="card__body_green">
+                            <div class="card__body-name">
+                                <h5 class="card__body-title">Ексімед, аптека №11</h5>
+                                <a href="#" class="card__body-link"><i class="card__body-link-icon fas fa-ellipsis-h"></i></a>
+                            </div>
+                            <div class="cardcard__body-adres">
+                                Киев, ул. Академика Туполева, 13А  ·  400 м
+                            </div>
+                            <div class="card__body-time">
+                                <span class="card__body-time_closed">Закрыта</span>, откроется завтра в 9:00 <span class="card__body-time_closed"><i class="card__body-time-icon fas fa-circle"></i></span>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="list-group-item__title">Ибупром Для Детей Форте
+                                    <p class="list-group-item__title_grey">Таблетки 400 мг</p>
+                                </div>
+                                <div class="list-group-item__price">от 54,00 ₴
+                                </div>
+                            </li>
+                                    </ul>
+                        <div class="card__footer">
+                            <button type="button" class="btn btn-lg btn-block filter__btn filter__btn_green">Выбрать и купить в этой аптеке</button>
+                            <div class="last-update">Последнее обновление: <span class="card__body-time_closed">8 ч. назад</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="navigation-block">
+                <div class="navigation-block__item">
+                    <a href="#" class="navigation-block__link"><i class="navigation-block__icon icon__gps"></i>Аптеки на карте</a>
+                </div>
+                <div class="navigation-block__item">
+                    <a href="#" class="navigation-block__link"><i class="navigation-block__icon icon__nav-arrow"></i></a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!--             //= html/footer.html
+ -->
+        </footer>
+    </div>
+    <!-- end wrapper -->
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

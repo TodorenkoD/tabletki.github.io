@@ -3,6 +3,9 @@
     line-height: 24px;
     justify-content: space-around;
     display: flex;
+    border-top: 1px solid $border-color;
+    background: $white;
+
 
     &__item {
         padding: 1rem;
@@ -20,7 +23,7 @@
         }
     }
 
-    &__link{
+    &__link {
         color: $green;
 
         &:hover {

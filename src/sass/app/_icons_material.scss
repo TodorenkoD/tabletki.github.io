@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "material";
-	src: url('/fonts/material.eot?en0msswirw5cnvrsq3l4n');
-	src: url('/fonts/material.eot?en0msswirw5cnvrsq3l4n#iefix') format('eot'),
-		url('/fonts/material.woff2?en0msswirw5cnvrsq3l4n') format('woff2'),
-		url('/fonts/material.woff?en0msswirw5cnvrsq3l4n') format('woff'),
-		url('/fonts/material.ttf?en0msswirw5cnvrsq3l4n') format('truetype'),
-		url('/fonts/material.svg?en0msswirw5cnvrsq3l4n#material') format('svg');
+	src: url('../fonts/material.eot?en0msswirw5cnvrsq3l4n');
+	src: url('../fonts/material.eot?en0msswirw5cnvrsq3l4n#iefix') format('eot'),
+		url('../fonts/material.woff2?en0msswirw5cnvrsq3l4n') format('woff2'),
+		url('../fonts/material.woff?en0msswirw5cnvrsq3l4n') format('woff'),
+		url('../fonts/material.ttf?en0msswirw5cnvrsq3l4n') format('truetype'),
+		url('../fonts/material.svg?en0msswirw5cnvrsq3l4n#material') format('svg');
 }
 
 @mixin ic-styles {
@@ -161,4 +161,4 @@
 }
 .ic-star {
 	@include ic(star);
-}
+}

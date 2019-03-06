@@ -238,11 +238,140 @@
         padding-left: 2rem;
 
         &-item {
-            padding:.5rem 0;
+            padding: .5rem 0;
         }
 
         &-link {
-                    @include text($Rubik, $green, 14, 500);
+            @include text($Rubik, $green, 14, 500);
+        }
+    }
+}
+
+.complex-search {
+    padding: 1rem;
+    position: relative;
+
+    &__close {
+        @extend .ic-close;
+        position: absolute;
+        right: 1.25rem;
+        top: 1rem;
+        font-size: 20px;
+    }
+
+    &__title {
+        @include text($Rubik, $black, 18, 700);
+        padding-bottom: 1rem;
+
+    }
+
+    p {
+        padding-bottom: 1rem;
+        line-height: 18px;
+    }
+
+    &__ico-bookmark {
+        @extend .ic-bookmark-border;
+        font-size: 20px;
+        color: $green;
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+.complex-search-result {
+
+    .card {
+        &__body {
+            &_green {
+                background: $green-lighten;
+                @include text($Rubik, $grey, 14, 400);
+                line-height: 16px;
+                padding: .75rem 1rem;
+            }
+
+            &-title {
+                color: $black;
+            }
+        }
+        &__footer{
+            .last-update{
+                color:$grey;
+                font-size:12px;
+                font-weight:400;
+                text-align:center;
+                padding:0.5rem;
+            }
+        }
+    }
+
+    &__item {
+        margin: 1rem 0;
+        padding: 0 1rem;
+
+        .all-results {
+            padding-bottom: 1rem;
+            margin: 0;
+            @include text($Rubik, $black, 16, 400);
+            line-height: 24px;
+
+            b {
+                font-weight: 700;
+                color: $green;
+            }
+        }
+    }
+
+    .list-group {
+        border-top: 1px solid $border-color;
+        border-radius: 0;
+
+        &-item {
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:.5rem 1.25rem;
+
+            &__title {
+                color: $light-grey;
+
+                &_grey {
+                    color: $grey;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+            }
+
+            &__price {
+                display: block;
+
+                &_grey {
+                    color: #888;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+
+            }
+        }
+    }
+
+    .show-more {
+        &__link {
+            padding: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 50px;
+
+            &:before {
+                @extend .ic-chevron-right;
+                font-size: 28px;
+                color: $border-color;
+                right: 20px;
+                position: absolute;
+            }
         }
     }
 }
