@@ -1,0 +1,96 @@
+.article {
+    &__team {
+        &-title {
+            margin-bottom: 40px;
+            font-size: 42px;
+            line-height: 1.23;
+            font-weight: 600;
+
+            .article__team-paragraph {
+                padding-top: 25px;
+                font-size: 22px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 60px;
+        }
+
+        &-position {
+            color: #7a7a7a;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        &-paragraph {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 540px;
+            line-height: 1.55;
+            margin: 0 auto;
+            padding-bottom: 25px;
+        }
+
+        &-list {
+            font-weight: 300;
+            padding-bottom: 20px;
+
+            &-item {
+                margin-left: 20px;
+                font-size: 18px;
+                line-height: 1.55;
+            }
+        }
+
+        &-image {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 45%;
+
+            img {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: block;
+                max-width: 360px;
+                width: 100%;
+            }
+        }
+
+        &-text {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .article {
+        &__team {
+            &-title {
+                font-size: 30px;
+
+                .article__team-paragraph {
+                    font-size: 18px;
+                }
+            }
+
+            &-item {
+                flex-direction: column;
+            }
+
+            &-image {
+                justify-content: center;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            &-text {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

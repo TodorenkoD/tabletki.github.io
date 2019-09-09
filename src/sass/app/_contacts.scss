@@ -1,0 +1,35 @@
+.article {
+    &__contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .article__title {
+            font-size: 26px;
+        }
+
+        &-leftside {
+            width: 40%;
+        }
+
+        &-rightside {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .article {
+        &__contacts {
+            flex-direction: column;
+
+            &-leftside, &-rightside {
+                width: 100%;
+            }
+        }
+
+        &__map {
+            padding-top: 30px;
+        }
+    }
+}

@@ -1,45 +1,45 @@
-                  .icon {
-                      &__login {
-                          &:before {
-                              width: 31px;
-                              height: 31px;
-                              background: url(../images/icons/icon--login.png) 0 0 no-repeat;
-                          }
-                      }
+.icon {
+    &__login {
+        &:before {
+            width: 31px;
+            height: 31px;
+            background: url(../images/icons/icon--login.png) 0 0 no-repeat;
+        }
+    }
 
-                      &__basket {
-                          &:before {
-                              width: 31px;
-                              height: 31px;
-                              background: url(../images/icons/icon--basket.png) 0 0 no-repeat;
-                          }
-                      }
+    &__basket {
+        &:before {
+            width: 31px;
+            height: 31px;
+            background: url(../images/icons/icon--basket.png) 0 0 no-repeat;
+        }
+    }
 
-                      &__bookmark {
-                          &:before {
-                              width: 31px;
-                              height: 31px;
-                              background: url(../images/icons/icon--bookmark.png) 0 0 no-repeat;
-                          }
-                      }
+    &__bookmark {
+        &:before {
+            width: 31px;
+            height: 31px;
+            background: url(../images/icons/icon--bookmark.png) 0 0 no-repeat;
+        }
+    }
 
-                      &__nav-arrow {
-                          &:before {
-                              display: inline-block;
-                              content: '';
-                              width: 21px;
-                              height: 21px;
-                              background: url(../images/icons/icon--nav_arrow.png) 0 0 no-repeat;
-                          }
-                      }
+    &__nav-arrow {
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 21px;
+            height: 21px;
+            background: url(../images/icons/icon--nav_arrow.png) 0 0 no-repeat;
+        }
+    }
 
-                      &__gps {
-                          &:before {
-                              display: inline-block;
-                              content: '';
-                              width: 20px;
-                              height: 20px;
-                              background: url(../images/icons/icon--gps.png) 0 0 no-repeat;
-                          }
-                      }
-                  }
+    &__gps {
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(../images/icons/icon--gps.png) 0 0 no-repeat;
+        }
+    }
+}

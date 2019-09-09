@@ -13,6 +13,12 @@ var uglify = require('gulp-uglify');
 var babel = require('gulp-babel');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+// font-vars
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
+var runTimestamp = Math.round(Date.now()/1000);
+var cacheBuster = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+var fontName = 'material'; 
 
 // обьект путей нашего проекта
 var paths = {
@@ -127,6 +133,27 @@ gulp.task('watch', function() {
 // Cleaning build dir
 gulp.task('clean:dist', function() {
   return del.sync(paths.clean);
+});
+
+// build font using svg
+gulp.task('iconfont', function(){
+  return gulp.src(['src/fonts_svg/material/*.svg']) // Source folder containing the SVG images
+    .pipe(iconfontCss({
+      fontName: fontName, // The name that the generated font will have
+      path: 'src/sass/templates/_icons_template.scss', // The path to the template that will be used to create the SASS/LESS/CSS file
+      targetPath: '../sass/app/_icons_material.scss', // The path where the file will be generated
+      fontPath: '../fonts/', // The path to the icon font file
+      cssClass: 'ic',
+      cacheBuster: cacheBuster
+    }))
+    .pipe(iconfont({
+      prependUnicode: false, // Recommended option 
+      fontName: fontName, // Name of the font
+      formats: ['ttf', 'eot', 'woff', 'woff2'], // The font file formats that will be created
+      normalize: true,
+      timestamp: runTimestamp // Recommended to get consistent builds when watching files
+    }))
+    .pipe(gulp.dest('src/fonts/'));
 });
 
 

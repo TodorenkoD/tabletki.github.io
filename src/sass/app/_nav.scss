@@ -1,58 +1,33 @@
-      .nav {
-          &__list {
-              display: flex;
-              list-style: none;
-              margin: 0;
-          }
+.nav {
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+    }
 
-          &__item {
-              position: relative;
-              padding: 0;
-              text-transform: uppercase;
-          }
+    &__item {
+        position: relative;
+        padding: 0;
+        text-transform: uppercase;
+    }
 
 
-          &__link {
-              position: relative;
+    &__link {
 
-              &_active {
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
 
-                  &:after,
-                  &:before {
-                      bottom: 100%;
-                      border: solid transparent;
-                      content: "";
-                      height: 0;
-                      width: 0;
-                      position: absolute;
-                      pointer-events: none;
-                  }
+            &:hover {
+                opacity: .9;
+            }
 
-                  &:after {
-                      border-bottom-color: $bg-color;
-                      border-width: 6px;
-                      right: -21px;
-                      bottom: -10px;
-                  }
-
-                  &:before {
-                      border-bottom-color: $grey-regular;
-                      border-width: 7px;
-                      right: -22px;
-                      bottom: -40px;
-                  }
-              }
-
-              &-icon {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  margin-right: 15px;
-
-                  &:before {
-                      display: inline-block;
-                      content: '';
-                  }
-              }
-          }
-      }
+            &:before {
+                display: inline-block;
+                content: '';
+            }
+        }
+    }
+}

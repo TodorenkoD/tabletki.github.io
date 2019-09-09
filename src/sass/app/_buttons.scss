@@ -1,62 +1,70 @@
-    .filter__btn {
-        @include text($Rubik, $white, 16, 400);
-        line-height: 24px;
-        padding: .5rem .5rem;
+.filter__btn {
+    @include text($Rubik, $white, 16, 400);
+    line-height: 24px;
+    padding: .5rem .5rem;
 
-        &-icon{
-            padding-right: 5px;
-        }
+    &-icon {
+        padding-right: 5px;
+    }
 
-        &_orange {
-            background: $orange;
-        }
+    &_orange {
+        background: $orange;
 
-        &_green {
-            background: $green;
+        &:hover {
+            opacity: .9;
         }
     }
 
-    .show {
-        &-all {
-            @include text($Rubik, $green, 14, 400);
-            background: $green-lighten;
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
-            line-height: 18px;
+    &_green {
+        background: $green;
+
+        &:hover {
+            opacity: .9;
         }
+    }
+}
 
-        &-more {
-            background: $green-lighten;
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color;
-            
+.show {
+    &-all {
+        @include text($Rubik, $green, 14, 400);
+        background: $green-lighten;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        line-height: 18px;
+    }
 
-            &__link {
-                @include text($Rubik, $green, 14, 400);
-                line-height: 18px;
-                display: flex;
-                justify-content: center;
-                padding: 1.5rem 1rem;
+    &-more {
+        background: $green-lighten;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
 
-                &:hover {
-                    color: $green;
-                    text-decoration: none;
-                }
+
+        &__link {
+            @include text($Rubik, $green, 14, 400);
+            line-height: 18px;
+            display: flex;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+
+            &:hover {
+                color: $green;
+                text-decoration: none;
             }
         }
     }
+}
 
-    .btn-block+.btn-block {
-        margin-top: .5rem;
-    }
+.btn-block + .btn-block {
+    margin-top: .5rem;
+}
 
-    button {
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
+button {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
-    .btn-block {
-        display: block;
-        width: 100%;
-    }
+.btn-block {
+    display: block;
+    width: 100%;
+}
